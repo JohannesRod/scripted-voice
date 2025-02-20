@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff; /* White background */
+  color: #000;
+  overflow: hidden;
+}
+
+/* Scrollable area */
+.scroll-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  cursor: grab;
+  position: relative;
+}
+
+/* Background lines */
+#background-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4000; /* Adjust to match the container */
+  height: 4000px;
+  pointer-events: none; /* Ensures it does not interfere with user clicks */
+  z-index: 0;
+}
+
+/* Container holding images */
+#container {
+  position: relative;
+  width: 4090px;
+  height: 2668px;
+}
+
+/* Image box */
+.image-box {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Image settings: maintain original dimensions */
+.image-box img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 200px; /* Set a reasonable max size */
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Stop sounds button */
+#stop-all-sounds {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+#title {
+  position: absolute;
+  top: 100px; /* Distance from the top of the container */
+  left: 100px; /* Distance from the left of the container */
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold; /* Makes the text bold */
+  color: #000; /* Text color */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+  margin: 0; /* Remove default margin */
+  padding: 5px; /* Optional: Adds space around the text */
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+#subtitle {
+  position: absolute;
+  top: 140px; /* Adjust this value to position below the title */
+  left: 100px; /* Align with the title */
+  width: 460px; /* Set a width to control text wrapping */
+  font-size: 14px; /* Adjust size as needed */
+  color: #333; /* Text color */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+  margin: 0; /* Remove default margin */
+  padding: 6px; /* Optional: Add padding around the subtitle */
+  overflow-wrap: break-word; /* Ensure long words break to fit within the width */
+}
